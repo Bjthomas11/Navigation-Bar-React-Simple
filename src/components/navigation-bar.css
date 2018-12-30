@@ -1,0 +1,20 @@
+h1 {
+  margin: 0;
+}
+
+.navigation-bar {
+  border-bottom: 1px solid red;
+  padding: 20px;
+  text-align: center;
+}
+
+.navigation-bar h1,
+.navigation-bar nav,
+.navigation-bar-nav li {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.navigation-bar-nav li {
+  margin-right: 10px;
+}

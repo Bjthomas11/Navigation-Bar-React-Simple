@@ -1,12 +1,26 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+// import react in
+import React from "react";
+// import react dom (virtual dom)
+import ReactDOM from "react-dom";
+// import navigation component
+import NavigationBar from "./components/navigation-bar";
+// import main css file
+import "./index.css";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+// created array of objects holding the data links text and href links
+const links = [
+  {
+    text: "Courses",
+    href: "http://www.thinkful.com/courses/"
+  },
+  {
+    text: "Mentorship",
+    href: "http://www.thinkful.com/mentorship/"
+  }
+];
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// render with react dom and use the main component (jsx) with a title and links as passed from the links array of objects from above, put it inside the root id on html page
+ReactDOM.render(
+  <NavigationBar title="Thinkful" links={links} />,
+  document.getElementById("root")
+);
